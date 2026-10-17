@@ -24,7 +24,7 @@ void consultar(List<Trabajo> trabajos) {
     return;
   }
   for (int i = 0; i < trabajos.length; i++) {
-    print('\${i + 1}.');
+    print('${i + 1}.');
     trabajos[i].mostrar();
   }
 }
@@ -93,10 +93,10 @@ void resumen(List<Trabajo> trabajos) {
   }
 
   print('--- RESUMEN ---');
-  print('Trabajos registrados: \${trabajos.length}');
-  print('Clientes diferentes: \${clientes.length}');
-  print('Pendientes: \${cantidades['Pendientes']}');
-  print('Terminados: \${cantidades['Terminados']}');
-  print('Suma de precios registrados: \$\$total');
-  print('Clientes: \${clientes.join(', ')}');
+  print('Trabajos registrados: ${trabajos.length}');
+  print('Clientes diferentes: ${clientes.length}');
+  print('Pendientes: ${cantidades['Pendientes']}');
+  print('Terminados: ${cantidades['Terminados']}');
+  print('Suma de precios registrados: \$total');
+  print('Clientes: ${clientes.join(', ')}');
 }
