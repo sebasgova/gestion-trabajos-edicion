@@ -1,0 +1,19 @@
+name: Comprobar programa Dart
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+      - name: Instalar Dart
+        uses: dart-lang/setup-dart@v1
+      - name: Revisar codigo
+        run: dart analyze
+      - name: Comprobar que abre y sale
+        run: printf '0\n' | dart run main.dart
